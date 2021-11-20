@@ -9,4 +9,5 @@ def main():
     sgt = SGT.deploy(accounts[1], {'from': accounts[0]})
     optionsLM = OptionsLM.deploy(sgt.address, token.address, token.address, accounts[1], "redeemable SGT", "rSGT",  {'from': accounts[0]})
     sgt.approve(optionsLM, 10000000*(10**18), {'from': accounts[1]})
+    return optionsLM
     
